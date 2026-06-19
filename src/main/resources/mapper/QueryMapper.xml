@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.example.query.mapper.QueryMapper">
+  <select id="findAll" resultType="com.example.query.entity.Query">
+        SELECT id, author, phone_number, query_body, status, date
+        FROM queries
+    </select>
+    <insert id="insert" parameterType="com.example.query.entity.Query">
+        INSERT INTO queries (author, phone_number, query_body, status, date) 
+        VALUES (#{author}, #{phone_number}, #{query_body}, #{status}, #{date})
+    </insert>
+</mapper>
+

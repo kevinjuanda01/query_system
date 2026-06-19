@@ -1,0 +1,52 @@
+header {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+form {
+    background-color: antiquewhite;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+  min-width: 48%;
+  margin-bottom: 10px;
+}
+
+input, select {
+    width: 50%;
+    padding: 8px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select {
+    width: 7%;
+}
+
+textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+.button-submit {
+    background-color: lightblue;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+}

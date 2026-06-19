@@ -1,0 +1,41 @@
+<head>
+    <link rel="stylesheet" th:href="@{css/new.css}">
+    <title>問合せ登録</title>
+</head>
+<header>
+    <h1>問合せ登録</h1>
+</header>
+<div class="responsive-form">
+<form th:action="@{/new}" th:object="${queryForm}" method="post">
+        <div>
+            <label>名前</label>
+            <input type="text" th:field="*{author}">
+            <div th:errors="*{author}"></div>
+        </div>
+        <div>
+            <label>電話番号</label>
+            <input type="text" th:field="*{phoneNumber}">
+            <div th:errors="*{phoneNumber}"></div>
+        </div>
+        <div>
+            <label>対応ステータス</label>
+            <select th:field="*{status}">
+                <option value="未対応">未対応</option>
+                <option value="対応中">対応中</option>
+                <option value="完了">完了</option>
+            </select>
+            <div th:errors="*{status}"></div>
+        </div>
+        <div>
+            <label>問合せ日時</label>
+            <input type="datetime-local" th:field="*{date}">
+            <div th:errors="*{date}"></div>
+        </div>
+        <div>
+            <label>問合せ内容</label>
+            <textarea th:field="*{queryBody}"></textarea>
+            <div th:errors="*{queryBody}"></div>
+        </div>
+        <button type="submit" class="button-submit">登録</button>
+    </form>
+</div>

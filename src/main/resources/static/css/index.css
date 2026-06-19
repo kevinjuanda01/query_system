@@ -1,0 +1,58 @@
+.body-style {
+    min-height: 70vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page-header {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.button-style1 {
+    background-color: greenyellow;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 7px 14px;
+    cursor: pointer;
+}
+
+.button-style2 {
+    background-color: lightblue;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+td,
+th {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: burlywood;
+    color: black;
+}
+
+tr {
+    background-color: orange;
+}
