@@ -30,7 +30,7 @@ input, select {
 }
 
 input[type="datetime-local"] {
-    width: 7%;
+    width: 8%;
 }
 
 select {
@@ -38,7 +38,7 @@ select {
 }
 
 textarea {
-    width: 25%;
+    width: 30%;
     height: 200px;
     padding: 8px;
     margin: 10px 0;
