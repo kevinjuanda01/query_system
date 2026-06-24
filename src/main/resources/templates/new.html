@@ -8,17 +8,17 @@
 <div class="responsive-form">
 <form th:action="@{/new}" th:object="${queryForm}" method="post">
         <div>
-            <label>名前</label>
-            <input type="text" th:field="*{author}">
+            <label><strong>名前</strong></label>
+            <input type="text" th:field="*{author}" placeholder="例: 山田太郎">
             <div th:errors="*{author}"></div>
         </div>
         <div>
-            <label>電話番号</label>
-            <input type="text" th:field="*{phoneNumber}">
+            <label><strong>電話番号</strong></label>
+            <input type="text" th:field="*{phoneNumber}" placeholder="例: 09012345678 ※ハイフンなし">
             <div th:errors="*{phoneNumber}"></div>
         </div>
         <div>
-            <label>対応ステータス</label>
+            <label><strong>対応ステータス</strong></label>
             <select th:field="*{status}">
                 <option value="未対応">未対応</option>
                 <option value="対応中">対応中</option>
@@ -27,15 +27,18 @@
             <div th:errors="*{status}"></div>
         </div>
         <div>
-            <label>問合せ日時</label>
+            <label><strong>問合せ日時</strong></label>
             <input type="datetime-local" th:field="*{date}">
             <div th:errors="*{date}"></div>
         </div>
         <div>
-            <label>問合せ内容</label>
-            <textarea th:field="*{queryBody}"></textarea>
+            <label><strong>問合せ内容</strong></label><br>
+            <textarea th:field="*{queryBody}" placeholder="問合せ内容を入力してください"></textarea>
             <div th:errors="*{queryBody}"></div>
         </div>
-        <button type="submit" class="button-submit">登録</button>
+        <div class="button-area">
+            <button type="submit" class="button-submit">登録</button>
+            <button type="button" class="button-cancel" onclick="window.location.href='/'">キャンセル</button>
+        </div>
     </form>
 </div>
